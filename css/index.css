@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    user-select: none;
+    will-change: animation;
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'Waltograph';
+    src: url('../fuentes/Super\ Cartoon.ttf');
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background: #d93930;
+}
+.barra{
+    background: rgb(215,13,2);
+    width: 100vw;
+    background: linear-gradient(90deg, rgba(215,13,2,1) 0%, rgba(217,57,48,1) 35%, rgba(108,6,0,1) 100%);
+    height: 100vh;
+    position: relative;
+    box-shadow: inset -5px 0px 20px #0000006d;
+    z-index: 1;
+    overflow: hidden;
+}
+.titulo{
+    position: absolute;
+    bottom: 30%; 
+    width: 570px;
+    left: 10%;
+    text-shadow: 1px 1px 0px #000;
+}
+.titulo h1{
+    font-size: 70px;
+    letter-spacing: 5px;
+    font-family: "Waltograph";
+}
+.logo-contenedor{
+    position: relative;
+    height: 100px;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.text{
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 18px;
+    text-shadow: 0px 1px 0px #000;
+}
+.tarjeta{
+    margin: 20px;
+    height: 270px;
+    width: 230px;
+    position: relative;
+    border-radius: 20px;
+    border: solid 2px #0000006d;
+    transition: 400ms;
+    box-shadow: 3px 3px 10px #000000;
+    z-index: 4;
+}
+.tarjeta:hover{
+    transform: scale(1.1) rotate(0deg);
+    box-shadow: 0px 5px 60px #000000;
+}
+.subtitulo{
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+.tarjeta-img{
+    position: absolute;
+    width: 200px;
+    top: -60px;
+    transition: 400ms;
+}
+.contenido{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-top: 50px;
+}
+.stitch{
+    background: #5372a6;
+}
+.animacionIMG{
+    transform: scale(1.2) rotate(12deg);
+    opacity: 0.85;
+    transition: 400ms;
+}
+.comeGalletas{
+    background: #409dd6;
+}
+.Portada{
+    position: absolute;
+    right: 5%;
+    width: 530px;
+    bottom: -20%;
+    animation: oso 2s infinite;
+    will-change: animation;
+    filter: drop-shadow(0px 0px 40px #ff0d00);
+}
+@keyframes oso {
+    0%{
+        transform: translateY(0px) scale(1.0);
+    } 50%{
+        transform: translateY(-100px);
+        opacity: 1;
+    } 100%{
+        transform: translateY(0px) scale(1.0);
+    }
+    0%{
+        transform:rotate(0deg)
+    } 40%{
+        transform:rotate(3deg)
+    } 80%{
+        transform:rotate(-3deg)
+    } 100%{
+        transform:rotate(0deg)
+    }
+}
+
+.botonPregunta{
+    background: #966346;
+    padding: 10px 5px;
+    border: solid 2px #bdbdbd;
+    position: absolute;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #ffffff9d;
+    animation: palpito 2s infinite;
+    will-change: animation;
+    text-shadow: 1px 1px 0px #000;
+}
+@keyframes palpito {
+    0%{
+        transform: scale(1.0);
+    } 50%{
+        transform: scale(1.05);
+    } 100%{
+        transform: scale(1.00);
+    }
+}
+.pregunta{
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    width: 500px;
+    background: #d93930;
+    border: solid 2px #000;
+    padding: 20px;
+    margin: 0 auto;
+    top: 15vw;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #000;
+    transform: scale(0.1);
+    transition: 500ms;
+}
+.pregunta p{
+    font-size: 20px;
+    text-align: center;
+}
+.botonRespuesta{
+    background: #966346;
+    padding: 5px 5px;
+    border: solid 2px #bdbdbd;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 1px 1px 0px #000;
+    margin: 20px 10px;
+}
+.preguntaAbierta{
+    transform: scale(1.8);
+    transition: 500ms;
+    opacity: 100;
+    visibility: visible;
+}
+.Descargar{
+    padding: 5px;
+    background: #d93930;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.insulto{
+    position: absolute;
+    z-index: 4;
+    bottom: -350%;
+    visibility: hidden;
+}
+.insultoAnimacion{
+    animation: insultos 3s;
+    visibility: visible;
+}
+@keyframes insultos {
+    0%{
+        bottom: -350%;
+    } 20%, 75%{
+        bottom: -190%;
+    } 100%{
+        bottom: -350%;
+    }
+    0%{
+        transform: rotate(0deg);
+    }   15%{
+        transform: rotate(5deg);
+    } 30%{
+        transform: rotate(-5deg);
+    } 45%{
+        transform: rotate(5deg);
+    } 60%{
+        transform: rotate(0deg);
+    } 75%{
+        transform: rotate(5deg);
+    } 90%{
+        transform: rotate(-5deg);
+    } 100%{
+        transform: rotate(0deg);
+    }
+}
+.carta{
+    background:rgb(160, 160, 160);
+}
+.animacionSi{
+    background: linear-gradient(90deg, rgba(215,13,2,1) 0%, rgba(217,57,48,1) 35%, rgba(108,6,0,1) 100%);
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+}
+.animacionSi2{
+    opacity: 1;
+}
+.flores{
+    position: absolute;
+    width: 500px;
+    bottom: -500px;
+}
+.corazon{
+    position: absolute;
+    width: 500px;
+    left: -500px;
+    margin-top: 0px;
+}
+.teAmo{
+    position: absolute;
+    width: 700px;
+    right: -500px;
+}
+
+.flores2{
+    z-index: 5;
+    animation: flores 5s infinite;
+}
+@keyframes flores {
+    0%{
+        bottom: -500px;
+    } 30%, 80%{
+        bottom: -100px;
+    } 100%{
+        bottom: -500px;
+    }
+}
+.corazon2{
+    left: 0px;
+    animation: corazon 5s infinite;
+}
+@keyframes corazon {
+    0%{
+        left: -500px;
+    } 30%, 80%{
+        left: 0px;
+    } 100%{
+        left: -500px;
+    }
+}
+.teAmo2{
+    right: 100px;
+    animation: teAmo 5s infinite;
+}
+@keyframes teAmo {
+    0%{
+        right: -800px;
+    } 30%, 80%{
+        right: 100px;
+    } 100%{
+        right: -800px;
+    }
+}
+.animacionSi{
+    visibility: hidden;
+    opacity: 0;
+    transition: 200ms;
+}
+
+.animacionSi2{
+    visibility: visible;
+    transition: 200ms;
+    opacity: 100;
+}
+
+.tiburon{
+    background: #5372a6;
+}
